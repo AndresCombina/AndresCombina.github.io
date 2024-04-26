@@ -1,0 +1,27 @@
+﻿
+.card {
+    background-color: #071d2a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    color:white;
+}
+
+h2 {
+    margin-top: 0;
+  
+}
+
+.data {
+    margin-top: 20px;
+}
+
+    .data p {
+        margin: 10px 0;
+    }
+
+        .data p span {
+            font-weight: bold;
+        }

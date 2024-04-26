@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PanelWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/font-awesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+     <header>
+        <div class="logo">
+            <img src="~/img/logo.jpg" />
+        </div>
+        <nav class="items">
+            <ul>
+                <li><a asp-action="Index" asp-controller="Home"> Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Tablas</a>
+                    <div class="dropdown-content">
+                        <a asp-action="Languajes" asp-controller="Home">Lenguajes</a>
+                        <a asp-action="Pais" asp-controller="Home">Paises</a>
+                        <a asp-action="Estudios" asp-controller="Home">Estudios</a>
+                        <a asp-action="Generos" asp-controller="Home">Generos</a>
+                        <a asp-action="Peliculas" asp-controller="Home">Peliculas</a>
+                        <a asp-action="Actores" asp-controller="Home">Actores</a>
+                        <a asp-action="Directores" asp-controller="Home">Directores</a>
+                        <a asp-action="Certificados" asp-controller="Home">Certificados</a>
+                    </div>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <div class="login">
+            <a asp-action="IncioSesionForm" asp-controller="Home"><button>Iniciar Sesión</button></a>
+        </div>
+    </header>
+
+
+
+            <div class="body-site">                           
+                            <main role="main" class="pb-3">
+                                @RenderBody()
+                            </main>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer-kickz">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row titulos-footer">
+
+                    <div class="col-md-5 offset-md-1 mb-3 logo-footer">
+                        <a>
+                            <img src="~/img/logo.jpg" />
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Peliculas</h5>
+                        <ul class="nav flex-column items-footer">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Alquiler</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Compra</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Suscripcion</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cine</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Suscripciones</h5>
+                        <ul class="nav flex-column items-footer">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pack Individual</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pack Pareja</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pack Familiar</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Nosotros</h5>
+                        <ul class="nav flex-column items-footer">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Historia</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contacto</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top kickz2-footer">
+                    <p>Cuevana Peliculas y Series © Todos los derechos reservados 2023 | Develope by <a>Andres Combina</a></p>
+                    <ul class="list-unstyled d-flex footer-redes">
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+﻿@using AndresCombinaFinal.Models.ListItems;
+@using PnlRS.Data.Data;
+@using PnlRS.Domain.Entities.BuscarPeliculas;
+<link href="~/css/formulariopeliculas.css" rel="stylesheet" />
+
+
+
+@model CreandoPeliculas;
+
+<br />
+<br />
+
+<div class="form-style">
+    <h4>Peliculas</h4>
+    <br />
+    <div class="form-group">
+        <form asp-action="PeliculasAbm">
+            <input asp-for="Id" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Nombre:</label>
+                        <input asp-asp-for="Name" class="form-control"/>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="StudioId" class="form-label">Estudio:</label>
+                        <select asp-for="StudioId" asp-items="Model.ListEstudios" class="form-control"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="LanguageId" class="form-label">Lenguaje:</label>
+                        <select asp-for="LanguageId" asp-items="Model.ListLenguajes" class="form-control"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="RunTimeMinutes" class="form-label">Duracion:</label>
+                        <input asp-for="RunTimeMinutes" class="form-control" />
+                        <span asp-validation-for="RunTimeMinutes" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BoxOfficeDollars" class="form-label">Taquilla:</label>
+                        <input asp-for="BoxOfficeDollars" class="form-control" />
+                        <span asp-validation-for="BoxOfficeDollars" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="DirectorId" class="form-label">Director:</label>
+                        <select asp-for="DirectorId" class="form-control"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="CountryId" class="form-label">Pais:</label>
+                        <select asp-for="CountryId" asp-items="Model.ListPaises" class="form-control"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="CertificateId" class="form-label">Certificado:</label>
+                        <select asp-for="CertificateId" asp-items="Model.ListCertificados"  class="form-control"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="BudgetDollars" class="form-label">Presupuesto:</label>
+                        <input asp-for="BudgetDollars" class="form-control" />
+                        <span asp-validation-for="BudgetDollars" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="ReleaseDate" class="form-label">Fecha de Estreno:</label>
+                        <input asp-for="ReleaseDate" class="form-control" />
+                        <span asp-validation-for="ReleaseDate"></span>
+                    </div>
+                </div>
+                <div>
+                    <label asp-for="Synopsis" class="form-label">Resumen de la Pelicula:</label>
+                    <textarea asp-for="Synopsis" class="form-control"></textarea>
+                    <span asp-validation-for="Synopsis" class="text-danger"></span>
+                </div>
+                <br />
+                <div style="text-align:right;">
+                    <input type="submit" class="btn btnalert-primary" value="Guardar" />
+                </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,107 @@
+﻿.contenedor{
+    height:450px;
+    width:300px;
+    box-shadow:0 10px 20px #000;
+    background-size:cover;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    font-family:sans-serif;
+    margin:10px;
+
+}
+.shape{
+    background-color:#002244;
+    height:250px;
+    width:400px;
+    margin-left:-20px;
+    position:relative;
+    top:-80px;
+    box-shadow:0 2px 15px #000;
+    transform:rotate(25deg);
+}
+.imagen {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 200px;
+    margin-left: 170px;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 15px rgb(58,54,54);
+    transform: rotate(-20deg);
+}
+.title{
+    font-size:15px;
+    padding-bottom:6px;
+    color:white;
+}
+.nombre{
+    margin-bottom:10px;
+    color:white;
+    font-size:20px;
+}
+.estado{
+    padding-left:30px;
+    padding-right:30px;
+    line-height:2;
+    color:white;
+    font-size:15px;
+}
+.botones{
+    margin-top:15px;
+}
+.botones > a{
+    width:30px;
+    font-family:Arial;
+    font-weight:100;
+    border-radius:10px;
+    padding:10px 15px;
+    text-decoration:none;
+    color:black;
+    background-color:aqua;
+}
+.botones >a:hover{
+    background-color:transparent;
+    border:2px solid aqua;
+    color:aqua;
+}
+.contenedor-lenguajes{
+    display:flex !important;
+    flex-wrap:wrap !important;
+}
+
+/*Actor*/
+.imagenactor {
+    background-image: url('../img/actores2.jpg');
+}
+
+/*Lenguaje*/
+.imagenlenguaje {
+    background-image: url('../img/lenguaje.jpg');
+}
+
+/*Pais*/
+.imagenpais {
+    background-image: url('../img/iconopaiss.jpg');
+}
+
+/*Estudio*/
+.imagenestudio {
+    background-image: url('../img/estudios.jpg');
+}
+/*Generos*/
+.imagengeneros {
+    background-image: url('../img/iconogenero.jpg');
+}
+/*Directores*/
+.imagendirectores {
+    background-image: url('../img/iconodirector2.jpg');
+}
+
+/*Certificados*/
+.imagencertificados {
+    background-image: url('../img/certificado.png');
+}

@@ -1,0 +1,51 @@
+﻿@using PnlRS.Data.Data;
+<link href="~/css/lenguajes.css" rel="stylesheet" />
+<link href="~/css/formulario y abm.css" rel="stylesheet" />
+<link href="~/css/datostablas.css" rel="stylesheet" />
+
+@model List<Genre>;
+
+<html>
+
+
+
+    <body>
+
+    <div class="card">
+        <h2>Generos</h2>
+        <div class="data">
+            <p>Último dato cargado: <span id="ultimo-dato">@Model.Last().Name</span></p>
+            <p>Primer dato cargado: <span id="primer-dato">@Model.First().Name</span></p>
+            <p>Cantidad total de datos: <span id="cantidad-datos">@Model.Count()</span></p>
+        </div>
+    </div>
+    <form class="form">
+        <h2 class="form-tile">Agregar Genero</h2>
+
+        <a asp-action="GenerosAbm" asp-controller="Home" type="submit" class="boton-formulario">Nuevo</a>
+    </form>
+    <div class="contenedor-lenguajes">
+        @foreach (var Elements in Model)
+        {
+            <div class="contenedor">
+                <div class="shape">
+                    <div class="imagen imagengeneros"></div>
+                </div>
+                <h3 class="nombre">Lenguaje: @Elements.Name</h3>
+                <br>
+                <h4 class="title">Estado:</h4>
+                <p class="estado">@Elements.Active</p>
+                <div class="botones">
+                    <a asp-action="LanguajesAbm" asp-controller="Home" asp-route-LanguajesId="@Elements.Id">Editar</a>
+                    <a asp-route-LanguajesId="@Elements.Id">On/off</a>
+                </div>
+            </div>
+
+
+
+        }
+    </div>
+
+
+</body>
+</html>

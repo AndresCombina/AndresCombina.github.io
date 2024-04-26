@@ -1,0 +1,66 @@
+﻿@using PnlRS.Data.Data;
+@using PnlRS.Domain.Entities.BuscarPeliculas;
+<link href="~/font-awesome/css/all.min.css" rel="stylesheet" />
+<link href="~/font-awesome/css/all.css" rel="stylesheet" />
+<link href="~/css/formulario y abm.css" rel="stylesheet" />
+@model List<RespuestaBuscarPeliculas>;
+<link href="~/css/datostablas.css" rel="stylesheet" />
+<link href="~/css/peliculas.css" rel="stylesheet" />
+
+
+<body>
+
+    <div class="card">
+        <h2>Peliculas</h2>
+        <div class="data">
+            <p>Último dato cargado: <span id="ultimo-dato">@Model.Last().PeliculaNombre</span></p>
+            <p>Primer dato cargado: <span id="primer-dato">@Model.First().PeliculaNombre</span></p>
+            <p>Cantidad total de datos: <span id="cantidad-datos">@Model.Count()</span></p>
+        </div>
+    </div>
+
+    <form class="form">
+        <h2 class="form-tile">Agregar Pelicula</h2>
+
+        <a asp-action="PeliculasAbm" asp-controller="Home" type="submit" class="boton-formulario">Nuevo</a>
+    </form>
+
+        @foreach (var Elements in Model)
+        {
+
+            <div class="contenedor">
+                <div class="icono">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <div class="contenedor-informacion">
+                    <h5>Nombre</h5>
+                    <p>@Elements.PeliculaNombre</p>
+                    <h5>Director</h5>
+                    <p>@Elements.DirectorNombre</p>
+                    <h5>Estudio</h5>
+                    <p>@Elements.StudioNombre</p>
+                </div>
+                <div class="resumen">
+                    <h5>Resumen</h5>
+                    <p>@Elements.ResumenPelicula</p>
+                </div>
+                <div class="botones">
+                    <button>Castings</button>
+                    <button>Generos</button>
+                    <button>On/Off</button>
+                    <button>Editar</button>
+                </div>
+
+
+            </div>
+
+        }
+
+
+
+    
+
+</body>
+
+
+

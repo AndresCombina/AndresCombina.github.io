@@ -1,0 +1,23 @@
+﻿@using PnlRS.Domain.Entities.CrearItems;
+<link href="~/css/formulario y abm.css" rel="stylesheet" />
+
+@model NuevosItems
+
+<form class="form" asp-action="LanguajesAbm">
+    <input asp-for="id" type="hidden" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <h2 class="form-tile">Agregar o Editar Lenguaje</h2>
+    <p class="form-paragraph">Quieres volver al menu anterior?<a asp-action="Languajes" asp-controller="Home" class="form_link">Click Aqui</a></p>
+    <div class="form_contenedor">
+        <div class="form_group">
+            <input asp-for="nombre" type="search" class="form_input" />
+            <label asp-for="nombre" class="form_label">Nombre:</label>
+            <span asp-validation-for="nombre" class="form_line"></span>
+
+        </div>
+        <div style="text-align:right">
+            <input type="submit" class="btn btn-primary" value="Guardar" />
+        </div>
+    </div>
+</form>
+
